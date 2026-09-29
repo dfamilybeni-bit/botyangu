@@ -65,6 +65,8 @@ async function start() {
     else if (cmd === 'menu') await reply(menuText())
     else if (cmd === 'runtime') await reply('Runtime: ' + runtime())
     else if (cmd === 'owner') await reply('Mmiliki: ' + OWNERNAME)
+    else if (cmd === 'time') await reply('Saa ya sasa: ' + new Date().toLocaleString('sw-TZ', { timeZone: 'Africa/Dar_es_Salaam' }))
+    else if (cmd === 'hello') await reply('Habari! Mimi ni ' + BOTNAME + ', niko tayari kukusaidia.')
   })
 }
 start()
