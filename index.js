@@ -1,3 +1,4 @@
+const http = require('http')
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys')
 const pino = require('pino')
 
@@ -67,3 +68,5 @@ async function start() {
   })
 }
 start()
+
+http.createServer((req, res) => res.end('Bot iko hewani')).listen(process.env.PORT || 3000)
